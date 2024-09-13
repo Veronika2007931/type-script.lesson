@@ -58,7 +58,7 @@ type Alert ='request' | 'succes' | 'error'
 const alert: Alert='request'
 
 function notification(text: Alert){
-  alert(text)
+  Alert(text)
 
 }
 notification('error')
