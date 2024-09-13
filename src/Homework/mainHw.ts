@@ -6,9 +6,9 @@ let notInitialize: undefined = undefined;
 let callback = (a: number) => { return 100 + a };
 
 // 2
-// let anything: any or unknown = -20;
-// anything = 'Text';
-// anything = {};
+let anything: unknown = -20;
+anything = 'Text';
+anything = {};
 
 // 3
 let some: string;
@@ -49,26 +49,30 @@ function showMessage(message: string) {
 type Page = {
     title : string;
     likes: number;
-    // accounts : string[]; ?????
+    accounts : string[]; 
     status: string;
-    details: object;
+    details?: object;
+
+    // аби вказати що поле не обов'язкове я використала ? і так я можу 
+    // використати цей тип для обох page  оскільки в другому нема деталей
 
 }
 
 const page1 : Page = {
     title: 'The awesome page',
     likes: 100,
-    // accounts: ['Max', 'Anton', 'Nikita'],
+    accounts: ['Max', 'Anton', 'Nikita'],
     status: 'open',
     details: {
       createAt: new Date('2021-01-01'),
       updateAt: new Date('2021-05-01'),
     }
    }
+
    
    const page2: Page = {
     title: 'Python or Js',
     likes: 5,
-    // accounts: ['Alex'],
+    accounts: ['Alex'],
     status: 'close',
    }

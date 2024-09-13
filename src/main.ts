@@ -71,6 +71,9 @@ function calcNumb(numbers:number[]):number {
     return acc
   }, 0)
 }
+
+// :number після дужок це ми вказали який тип поверне саме результат функції
+
 calcNumb(numbers)
 
 type PlayerObj ={
