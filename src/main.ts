@@ -58,7 +58,7 @@ type Alert ='request' | 'succes' | 'error'
 const alert: Alert='request'
 
 function notification(text: Alert){
-  Alert(text)
+  alert(text)
 
 }
 notification('error')
@@ -93,4 +93,5 @@ function greetPlayer(player: PlayerObj){
 }
 
 greetPlayer(objPlayer)
+
 

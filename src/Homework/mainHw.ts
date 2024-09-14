@@ -39,7 +39,7 @@ function showMessage(message: string) {
     return num1 + num2;
    }
    
-   function customError() {
+   function customError(): void {
     throw new Error('Error');
    }
 //    що це за запис
