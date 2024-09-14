@@ -106,7 +106,7 @@ const statusFilters: StatusFilter = {
    };
 
 
-   function identity<T>(arg){
+   function identity<T>(arg: T){
      // буква в дужках може бути будь яка 
     // це значить що тип буде присвоюватись тоді коли 
     // ми уже викличемо функцію
