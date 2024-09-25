@@ -1,16 +1,17 @@
-import { useState } from "react"
+import { ChangeEvent, useState } from "react"
 
-export const ToDoForm = ({addToDo})=>{
-    const [text, setText] = useState('')
+export const ToDoForm = ({addToDo}: {addToDo: (text: string)=> void})=>{
+    const [text, setText] = useState<string>('')
 
-    const handleAddToDo=(e)=>{
+    const handleAddToDo=(e:SubmitEvent)=>{
         e.preventDefault()
-        const text = e.currentTarget.elements.text.value
+        setText("")
         addToDo(text)
+       
     }
     return(
-        <form onSubmit={addToDo}>
-            <input name="text" type="text" value={text} onChange={(e)=>{setText( e.target.value)}}/>
+        <form onSubmit={handleAddToDo}>
+            <input name="text" type="text" value={text} onChange={(e: ChangeEvent<HTMLInputElement>)=>{setText( e.target.value)}}/>
             <button type="submit">create</button>
         </form>
 
