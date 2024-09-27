@@ -12,7 +12,7 @@ export interface ITodo{
 
 function App() {
 
-  const [toDos, setToDos]= useState<ITodo[]>([])
+  // const [toDos, setToDos]= useState<ITodo[]>([])
 
  const  addToDo = (text: string)=>{
    const newToDo = {
