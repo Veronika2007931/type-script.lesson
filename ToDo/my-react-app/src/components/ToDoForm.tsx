@@ -1,9 +1,10 @@
-import { ChangeEvent, useState } from "react"
+import { ChangeEvent, FormEvent, useState } from "react"
+
 
 export const ToDoForm = ({addToDo}: {addToDo: (text: string)=> void})=>{
     const [text, setText] = useState<string>('')
 
-    const handleAddToDo=(e:SubmitEvent)=>{
+    const handleAddToDo=(e:FormEvent)=>{
         e.preventDefault()
         setText("")
         addToDo(text)
